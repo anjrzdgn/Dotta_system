@@ -1,0 +1,67 @@
++-----------------------------------+
+|              Person               |
++-----------------------------------+
+| -name: string                     |
+| -password: string                 |
+| -rule: string                     |
+| -visibility: bool                 |
++-----------------------------------+
+| +Person(name: string, pass: string, rule: string, vis: bool)
+| +display_name(): string           |
+| +display_password(): string       |
+| +display_rule(): string           |
+| +display_visibility(): bool       |
+| +set_name(new_name: string): void |
+| +set_password(new_password: string): void
+| +set_rule(new_rule: string): void |
+| +set_visibility(new_visibility: bool): void 
+| +save_to_file(filename: string): void 
+| +operator<<(os: ostream, p: Person): ostream 
++-----------------------------------+
+          ^
+          |
++-----------------------------------+
+|              Student              |
++-----------------------------------+
+| -score: int                       |
++-----------------------------------+
+| +Student(name: string, pass: string, rule: string, vis: bool) 
+| +operator==(other: Student): bool |
++-----------------------------------+
+
++-----------------------------------+
+|              Course               |
++-----------------------------------+
+| -name: string                     |
+| -teacher: string                  |
+| -capacity: int                    |
+| -visibility: bool                 |
+| -students: vector<Student>        |
++-----------------------------------+
+| +Course(name: string, teacher: string, capacity: int, visibility: bool) 
+| +add_student(s: Student, score: int): void 
++-----------------------------------+
+
++-----------------------------------+
+|              Slave                |
++-----------------------------------+
+| -name_of_student: string          |
+| -link_of_uploaded_HW: string      |
+| -score_of_HW: int                 |
+| -sent: bool                       |
++-----------------------------------+
+| +Slave(name: string, link: string, HW_score: int, sent: bool) 
++-----------------------------------+
+
++-----------------------------------+
+|                HW                 |
++-----------------------------------+
+| -name: string                     |
+| -teacher: string                  |
+| -course: string                   |
+| -visibility: bool                 |
+| -slaves: vector<Slave>            |
++-----------------------------------+
+| +HW(name: string, teacher: string, course: string, visibility: bool) 
+| +bring_student_to_HW(student_name: string, HW_link: string, HW_score: int, sent: bool): void 
++-----------------------------------+
